@@ -45,6 +45,17 @@
     <druid.guice.version>4.1.0</druid.guice.version>
     <kafka.version>2.0.0</kafka.version>
   </properties>
+  <dependencyManagement>
+      <dependencies>
+          <dependency>
+          <groupId>org.eclipse.jetty</groupId>
+          <artifactId>jetty-bom</artifactId>
+          <version>${druid.jetty.version}</version>
+          <type>pom</type>
+          <scope>import</scope>
+      </dependency>
+      </dependencies>
+  </dependencyManagement>
       <dependencies>
         <dependency>
           <groupId>io.druid</groupId>
@@ -158,32 +169,26 @@
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-server</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-servlet</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-servlets</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-proxy</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-util</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>org.eclipse.jetty</groupId>
           <artifactId>jetty-security</artifactId>
-          <version>${druid.jetty.version}</version>
         </dependency>
         <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
